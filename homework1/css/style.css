@@ -1,0 +1,56 @@
+html{
+    box-sizing: border-box;
+
+}
+*,
+*:before,
+*:after{
+    box-sizing: inherit;
+}
+
+img{
+    max-width: 100%;
+    height: auto;
+    vertical-align: top;
+}
+ul,
+ol{
+    padding-left: 0;
+    margin: 0;
+    list-style: none;
+}
+.nav-list::before,
+.nav-list::after{
+    content: '';
+}
+.list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+
+}
+.list li:before{
+content: '';
+display: inline-block;
+height: 10px;
+width: 10px;
+margin-right: 7px;
+background: crimson;
+border-radius: 50%;
+}
+.num-list{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    counter-reset: count;
+
+}
+.num-list li{
+    counter-increment: count;
+}
+.num-list li:before{
+    content: counter(count) '.';
+    color: darkblue;
+    margin-right: 7px;
+
+}
